@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-gistogram"
+    }
+  },
+  "defaultProject": "ng-gistogram",
+  "cli": {
+    "analytics": "84f74000-78d6-4d67-ad64-311631f723d9"
+  }
 }

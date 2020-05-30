@@ -1,0 +1,26 @@
+<div class="hist-wrapper">
+  <div class="legend-left">
+    <div class="legend-left__row" *ngFor="let num of leftLegend$ | async">
+      {{num}}
+      <div class="legend-left__row__stick">
+      </div>
+    </div>
+  </div>
+  <div class="hist-container">
+    <div class="cols-container">
+      <div class="col" *ngFor='let col of cols$ | async'>
+        <div class="col__bar"
+             [style.height]="(bar.value/2 - 20) + 'px'"
+             [style.width]="(90/col.length) + 'px'"
+             [style.backgroundColor]="bar.background"
+             *ngFor='let bar of col'>
+        </div>
+      </div>
+    </div>
+    <div class="legend-bottom">
+      <div class="legend-bottom__col" *ngFor="let col of bottomLegend$ | async">
+        {{col}}
+      </div>
+    </div>
+  </div>
+</div>
